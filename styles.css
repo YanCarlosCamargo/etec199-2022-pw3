@@ -1,0 +1,79 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display:flex;
+    justify-content: space-around;
+}
+
+form {
+    min-width: 30vw;
+    max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form input {
+    padding: .5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+#botao {
+    border: 0;
+    border-radius: 0;
+    padding: .5rem;
+    transition: .2s ease;
+    font-size: 20px;
+    background-color: white;
+}
+
+#botao:hover {
+    background-color: black;
+    color: white;
+}
+
+.aprovado {
+    background: greenyellow;
+}
+
+.reprovado {
+    background: rgb(255, 104, 104);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .tabela {
+        margin-bottom: 2rem !important;
+    }
+    form {
+        max-height: 60vh;
+    }
+}
