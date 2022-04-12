@@ -5,6 +5,7 @@
 
    function handleCreateAluno($array, $name, $v1, $v2, $v3) {
 
+    
         $novoAluno = new Aluno($name, $v1, $v2, $v3);
         $arrayAluno = json_encode($novoAluno);
         array_push($array, $arrayAluno);
