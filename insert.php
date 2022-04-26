@@ -1,15 +1,17 @@
 <?php
 
 require './conexao.php';
+require './controller.php';
 
 
-$nome = "yão";
-$nota1 = 10;
-$nota2 = 10;
-$nota3 = 10;
+
+$nome = $_POST['name'];
+$nota1 = $_POST['nota1'];
+$nota2 = $_POST['nota2'];
+$nota3 = $_POST['nota3'];
 $media = (($nota1+$nota2+$nota3)/3);
 
-$insert = "INSERT INTO tbAlunos (nome, nota1, nota2, nota3, media) VALUES (':nome', :nota1, :nota2, :nota3, :media)";
+$insert = "INSERT INTO tbAlunos (id,nome, nota1, nota2, nota3, media) VALUES (null, :nome, :nota1, :nota2, :nota3, :media)";
 echo $insert;
 $salvar = $conexao->prepare($insert);
 

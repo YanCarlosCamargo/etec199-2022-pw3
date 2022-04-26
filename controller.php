@@ -18,7 +18,17 @@
    $alunos = handleCreateAluno($alunos, "Yão", 10, 10, 10);
     
 
-
+        function incluirAluno(){
+        
+        };
+        
+        function editarAluno(){
+        
+        };
+        
+        function deletarAluno(){
+        
+        };
    
 
     echo "<br>";

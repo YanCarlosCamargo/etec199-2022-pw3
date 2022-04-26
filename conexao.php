@@ -1,9 +1,9 @@
 <?php
 // Data Source Name
 // driver; endereço; nome do banco de dados; subconjunto de caracteres
-$DSN = "mysql:host=fdb30.awardspace.net;dbname=3717026_bdescola;charset=utf8";
-$usuario = "3717026_bdescola";
-$senha = "YanCarlos000!";
+$DSN = "mysql:host=fdb25.awardspace.net;dbname=3451184_crud;charset=utf8";
+$usuario = "3451184_crud";
+$senha = "Crud%System08";
 // Tratamento de erro
 try {
     // Classe PFO de conexão
@@ -14,3 +14,5 @@ try {
     // Fecha conexão
     exit;
 }
+
+?>
