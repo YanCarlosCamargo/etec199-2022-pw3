@@ -12,7 +12,7 @@ $nota3 = $_POST['nota3'];
 $media = (($nota1+$nota2+$nota3)/3);
 
 $insert = "INSERT INTO tbAlunos (id,nome, nota1, nota2, nota3, media) VALUES (null, :nome, :nota1, :nota2, :nota3, :media)";
-echo $insert;
+
 $salvar = $conexao->prepare($insert);
 
     $salvar->bindParam(':nome', $nome);
@@ -21,7 +21,7 @@ $salvar = $conexao->prepare($insert);
     $salvar->bindParam(':nota3', $nota3);
     $salvar->bindParam(':media', $media);
 
-    if($salvar->execute()) echo "insert bem sucedido"; else echo "erro";
+    if($salvar->execute()) echo "insert bem sucedido"; else echo "<br>erro";
 
 
 ?>
