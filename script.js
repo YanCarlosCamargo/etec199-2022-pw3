@@ -116,5 +116,6 @@ async function insertAlunoBD(name, nota1, nota2, nota3){
   await fetch('./insert.php', {
     method: 'POST',
     body: data,
+    "Content-Type": "multipart/form-data"
   })
 }
