@@ -67,7 +67,7 @@ const inserirAluno = (event) => {
 
     // Depois de criar e inserir o aluno na tabela calcula as médias novamente
     calcularMedia()
-    insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value)
+    insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
   } 
 }
 
@@ -107,6 +107,7 @@ const toggleModal = (id) => {
 
 async function insertAlunoBD(name, nota1, nota2, nota3){
     const data = new FormData();
+    console.log(name, nota1, nota2, nota3)
 
     data.append('name', name);
     data.append('nota1', nota1);
