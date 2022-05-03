@@ -106,13 +106,15 @@ const toggleModal = (id) => {
 }
 
 async function insertAlunoBD(name, nota1, nota2, nota3){
+    const data = new FormData();
+
+    data.append('name', name);
+    data.append('nota1', nota1);
+    data.append('nota2', nota2);
+    data.append('nota3', nota3);
+
   await fetch('./insert.php', {
     method: 'POST',
-    body: JSON.stringify({
-      name: name,
-      nota1,
-      nota2,
-      nota3
-    })
+    body: data,
   })
 }

@@ -1,7 +1,6 @@
 <?php
 
 require './conexao.php';
-require './controller.php';
 
 
 
