@@ -62,12 +62,12 @@ const inserirAluno = (event) => {
   
     table.appendChild(tr)
   
-    form.reset()
     form.name.focus()
-
+    
     // Depois de criar e inserir o aluno na tabela calcula as médias novamente
     calcularMedia()
     insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
+    form.reset()
   } 
 }
 
