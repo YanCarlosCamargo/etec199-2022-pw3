@@ -14,5 +14,3 @@ jobs:
         server: etec199-2020-yancarlos.atwebpages.com
         username: 3451184_pw3ds
         password: ${{ secrets.password }}
-        protocol: sftp
-        port: 221
