@@ -105,8 +105,8 @@ const toggleModal = (id) => {
         }
 }
 
-function insertAlunoBD(name, nota1, nota2, nota3){
-  fetch('./insert.php', {
+async function insertAlunoBD(name, nota1, nota2, nota3){
+  await fetch('./insert.php', {
     method: 'POST',
     body: JSON.stringify({
       name: name,
