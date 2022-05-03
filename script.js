@@ -106,7 +106,7 @@ const toggleModal = (id) => {
 }
 
 function insertAlunoBD(name, nota1, nota2, nota3){
-  fetch('./select.php', {
+  fetch('./insert.php', {
     method: 'POST',
     body: JSON.stringify({
       name: name,
