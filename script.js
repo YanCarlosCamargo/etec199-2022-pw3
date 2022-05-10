@@ -123,19 +123,9 @@ async function insertAlunoBD(name, nota1, nota2, nota3){
 
 async function listAlunoBD() {
 
-  const dados = await fetch('./select.php'
- 
-)
- .then(res=> res.json())
- .then(data=> console.log(data));
-
+  const dados = await fetch('./select.php');
 
   console.log(dados);
-  var stringified = JSON.stringify(dados);
-  console.log(stringified);
-  var parsedObj = JSON.parse(stringified);
-console.log(parsedObj);
-
 
   const json = await dados.json();
   console.log(json)
