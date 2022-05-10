@@ -120,3 +120,13 @@ async function insertAlunoBD(name, nota1, nota2, nota3){
     "Content-Type": "multipart/form-data"
   })
 }
+
+async function listAlunoBD() {
+
+  const dados = await fetch('./select.php', {
+
+  })
+  console.log(dados);
+}
+
+listAlunoBD();
