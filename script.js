@@ -125,6 +125,8 @@ async function listAlunoBD() {
 
   const dados = await fetch('./select.php');
   console.log(dados)
+  var stringified = JSON.stringify(data);
+  console.log(stringified);
   const json = await dados.json();
   console.log(json)
 }
