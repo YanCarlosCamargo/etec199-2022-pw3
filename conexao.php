@@ -8,10 +8,10 @@ $senha = "Crud%System08";
 try {
     // Classe PFO de conexão
     $conexao = new PDO($DSN, $usuario, $senha);
-    //echo 'Conectou com sucesso!';
+  
 } catch (PDOException $erro) {
     echo $erro->getMessage();
-    // Fecha conexão
+
     exit;
 }
 
