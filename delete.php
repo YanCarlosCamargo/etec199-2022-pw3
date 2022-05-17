@@ -5,12 +5,12 @@ require './conexao.php';
 
 $id = $_POST['id'];
 
- public function deleteTask($id) {
+ public function deleteTask($conexao,$id) {
         $sql = 'DELETE FROM tbAluno '. 'WHERE id = :id';
 
         
 
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $c->prepare($sql);
         $stmt->bindValue(':id', $id);
 
         $below = $stmt->rowCount();
