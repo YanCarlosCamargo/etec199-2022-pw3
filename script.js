@@ -147,7 +147,7 @@ async function deleteAluno(id){
 }
 
 
-autoInsertBD = (list) => {
+function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
      const json = list[i];
      create(json);
@@ -168,15 +168,15 @@ autoInsertBD = (list) => {
     tr.appendChild(nomeAluno)
   
     const nota1 = document.createElement("td")
-    nota1.innerText = _nota1
+    nota1.innerText = _nota1;
     tr.appendChild(nota1)
   
     const nota2 = document.createElement("td")
-    nota2.innerText = { _nota2 }
+    nota2.innerText =  _nota2 
     tr.appendChild(nota2)
   
     const nota3 = document.createElement("td")
-    nota3.innerText = { _nota3 }
+    nota3.innerText =  _nota3 
     tr.appendChild(nota3)
   
     const media = document.createElement("td")
