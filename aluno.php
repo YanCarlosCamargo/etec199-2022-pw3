@@ -1,5 +1,6 @@
 <?php 
     class Aluno {
+        public $id;
         public $_nome;
         public $_nota1;
         public $_nota2;
@@ -7,6 +8,7 @@
         public $_media;
 
     public function __construct ($name, $v1, $v2, $v3){
+        $this->id = $id;
         $this->_nome = $name;
         $this->_nota1 = $v1;
         $this->_nota2 = $v2;
