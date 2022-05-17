@@ -72,6 +72,7 @@ const inserirAluno = (event) => {
 }
 
 
+
 const botao = document.querySelector("#botao")
 botao.addEventListener("click", inserirAluno)
 
@@ -128,7 +129,8 @@ async function listAlunoBD() {
   console.log(dados);
 
   const json = await dados.json();
-  console.log(json)
+  console.log(json);
+  return json;
 }
 
 listAlunoBD();
@@ -144,4 +146,14 @@ async function deleteAluno(id){
 })
 }
 
-deleteAluno(10).then((resultado) => console.log("resultado do delete: "+resultado))
+listAlunoBD.then((resultado) => autoInsertBD(resultado))
+
+
+
+
+autoInsertBD = (list) => {
+  for (let i = 0; i < list.length; i++) {
+    const element = list[i];
+    console.log(element);
+  }
+}
