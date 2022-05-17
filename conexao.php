@@ -11,7 +11,7 @@ try {
    return $conexao = new PDO($DSN, $usuario, $senha);
   
 } catch (PDOException $erro) {
-   return echo $erro->getMessage();
+   return $erro->getMessage();
 
     exit;
 }
