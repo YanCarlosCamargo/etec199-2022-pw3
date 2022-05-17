@@ -123,14 +123,14 @@ function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
      const json = list[i];
 
-     
+     const { id } = list[i];
      const { _nome } = list[i];
      const { _nota1 } = list[i];
      const { _nota2 } = list[i];
      const { _nota3 } = list[i];
 
 
-     create(0, _nome, _nota1, _nota2, _nota3);
+     create(id, _nome, _nota1, _nota2, _nota3);
     console.log(json);
   }
 
@@ -145,6 +145,7 @@ function autoInsertBD(list){
 
     const btn = document.createElement("button");
     btn.setAttribute("value", id);
+    btn.setAttribute("class", "deleteButton");
   
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;
@@ -165,7 +166,7 @@ function autoInsertBD(list){
     const media = document.createElement("td")
     media.innerText = (n3+n2+n1)/3;
     tr.appendChild(media);
-    
+
     tr.appendChild(btn);
   
     table.appendChild(tr)

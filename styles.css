@@ -157,3 +157,7 @@ input[type=number] {
         
     }
 }
+
+.deleteButton {
+    background-color: #F21F0C;
+}
