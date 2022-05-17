@@ -149,14 +149,14 @@ async function deleteAluno(id){
 
 function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
-     const json = list[i];
-     create(json);
+     const { _nome }, { _nota1 }, { _nota2 }, { _nota3 } = list[i];
+     create(_nome, _nota1, _nota2, _nota3);
     console.log(json);
   }
 
 
 
-  function create({ _nome }, { _nota1 }, { _nota2 }, { _nota3 }){
+  function create(_nome , _nota1, _nota2,_nota3){
     const form = document.querySelector("form")
   if (validacao()) {
     const table = document.querySelector(".tbody")
