@@ -166,7 +166,7 @@ function autoInsertBD(list){
 
   function create(_nome , _nota1, _nota2,_nota3){
     const form = document.querySelector("form")
-  if (validacao()) {
+ 
     const table = document.querySelector(".tbody")
   
     const tr = document.createElement("tr")
@@ -191,7 +191,7 @@ function autoInsertBD(list){
     tr.appendChild(media)
   
     table.appendChild(tr)
-  }
+  
 }
 }
 
