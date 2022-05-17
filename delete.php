@@ -3,7 +3,7 @@
 require './conexao.php';
 
 
-$id = 14;
+$id = $_POST['id'];
 
  
         $sql = 'DELETE FROM tbAlunos '. 'WHERE Id = :id';
@@ -22,7 +22,5 @@ $id = 14;
 
      
 
-    $result = ($below <= $after ? 'Deu Certo! Foi deletado.' :  "Deu Errado! Não deletou.");
- 
-    echo $result;
+
 ?>
