@@ -149,7 +149,6 @@ async function deleteAluno(id){
 
 function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
-    { _nota1 }
      const json = list[i];
 
 
