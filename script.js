@@ -149,12 +149,44 @@ async function deleteAluno(id){
 
 autoInsertBD = (list) => {
   for (let i = 0; i < list.length; i++) {
-    const element = list[i];
+    const { _nome } = list[i];
     console.log(element);
   }
+
+
+
+  function create({ _name }, { _nota1 }){
+    const form = document.querySelector("form")
+  if (validacao()) {
+    const table = document.querySelector(".tbody")
+  
+    const tr = document.createElement("tr")
+  
+    const nomeAluno = document.createElement("td")
+    nomeAluno.innerText = list
+    tr.appendChild(nomeAluno)
+  
+    const nota1 = document.createElement("td")
+    nota1.innerText = form.nota1.value
+    tr.appendChild(nota1)
+  
+    const nota2 = document.createElement("td")
+    nota2.innerText = form.nota2.value
+    tr.appendChild(nota2)
+  
+    const nota3 = document.createElement("td")
+    nota3.innerText = form.nota3.value
+    tr.appendChild(nota3)
+  
+    const media = document.createElement("td")
+    tr.appendChild(media)
+  
+    table.appendChild(tr)
+  }
+}
 }
 
-listAlunoBD().then((resultado) => autoInsertBD(resultado))
+listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
 
 
