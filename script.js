@@ -35,9 +35,11 @@ const validacao = () => {
 // Cria os elementos e calcula a média de um novo aluno
 const inserirAluno = (event) => {
   event.preventDefault()
-  const form = document.querySelector("form")
+  const form = document.querySelector("form");
+  const table = document.querySelector(".tbody")
+  table.innerHTML = "</>";
   insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
-  form.reset()
+  form.reset();
   listAlunoBD().then((resultado) => autoInsertBD(resultado));
 }
 
@@ -162,7 +164,7 @@ function autoInsertBD(list){
     tr.appendChild(media)
   
     table.appendChild(tr)
-  table.innerHTML = "</>";
+  
 }
 }
 
