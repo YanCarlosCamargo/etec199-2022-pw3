@@ -20,7 +20,7 @@ $id = $_POST['id'];
     $after = $stmt->rowCount();
 
 
-        return ($below >= $after : echo 'Deu Certo! Foi deletado.'; echo "Deu Errado! Não deletou.")
+        return ($below >= $after ? echo 'Deu Certo! Foi deletado.'; : echo "Deu Errado! Não deletou.")
     }
 
     $result = deleteTask($id);
