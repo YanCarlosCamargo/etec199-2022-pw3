@@ -149,7 +149,16 @@ async function deleteAluno(id){
 
 function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
-     const json, { _nome }, { _nota1 }, { _nota2 }, { _nota3 } = list[i];
+    { _nota1 }
+     const json = list[i];
+
+
+     const { _nome } = list[i];
+     const { _nota1 } = list[i];
+     const { _nota2 } = list[i];
+     const { _nota3 } = list[i];
+
+
      create(_nome, _nota1, _nota2, _nota3);
     console.log(json);
   }
