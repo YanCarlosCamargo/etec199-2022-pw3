@@ -7,7 +7,7 @@
         public $_nota3;
         public $_media;
 
-    public function __construct ($name, $v1, $v2, $v3){
+    public function __construct ($id, $name, $v1, $v2, $v3){
         $this->id = $id;
         $this->_nome = $name;
         $this->_nota1 = $v1;
