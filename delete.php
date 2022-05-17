@@ -5,7 +5,7 @@ require './conexao.php';
 
 $id = 13;
 
- function deleteTask($conexao,$id) {
+ 
         $sql = 'DELETE FROM tbAlunos '. 'WHERE Id = :id';
 
         
@@ -20,9 +20,9 @@ $id = 13;
     $after = $stmt->rowCount();
 
 
-        return ($below >= $after ? 'Deu Certo! Foi deletado.' :  "Deu Errado! Não deletou.");
-    }
+     
 
-    $result = deleteTask($id);
+    $result = ($below >= $after ? 'Deu Certo! Foi deletado.' :  "Deu Errado! Não deletou.");
+ 
     echo $result;
 ?>
