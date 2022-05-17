@@ -150,7 +150,7 @@ async function deleteAluno(id){
 autoInsertBD = (list) => {
   for (let i = 0; i < list.length; i++) {
     const { _nome } = list[i];
-    console.log(element);
+    console.log(_nome);
   }
 
 
