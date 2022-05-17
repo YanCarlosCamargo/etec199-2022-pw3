@@ -149,5 +149,7 @@ async function deleteAluno(id){
 return resultDelete;
 }
 
+  console.log(deleteAluno(13));
+
 alert(deleteAluno(13));
 
