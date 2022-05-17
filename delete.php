@@ -5,7 +5,7 @@ require './conexao.php';
 
 $id = $_POST['id'];
 
- public function deleteTask($conexao,$id) {
+ function deleteTask($conexao,$id) {
         $sql = 'DELETE FROM tbAluno '. 'WHERE id = :id';
 
         

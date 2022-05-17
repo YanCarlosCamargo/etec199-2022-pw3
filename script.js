@@ -135,21 +135,16 @@ listAlunoBD();
 
 async function deleteAluno(id){
   const data = new FormData();
-  console.log(id)
-
   data.append('id', id);
- 
 
-  resultDelete = await fetch('./delete.php', {
+  return await fetch('./delete.php', {
   method: 'POST',
   body: data,
   "Content-Type": "multipart/form-data"
 })
-
-return resultDelete;
 }
 
-  console.log(deleteAluno(13));
+  console.log("Resultado do Delete: "+deleteAluno(13));
 
 alert(deleteAluno(13));
 
