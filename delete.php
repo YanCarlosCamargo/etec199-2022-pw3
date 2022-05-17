@@ -10,7 +10,7 @@ $id = $_POST['id'];
 
         
 
-        $stmt = $c->prepare($sql);
+        $stmt = $conexao->prepare($sql);
         $stmt->bindValue(':id', $id);
 
         $below = $stmt->rowCount();
