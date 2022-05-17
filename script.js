@@ -132,3 +132,22 @@ async function listAlunoBD() {
 }
 
 listAlunoBD();
+
+async function deleteAluno(id){
+  const data = new FormData();
+  console.log(id)
+
+  data.append('id', id);
+ 
+
+  resultDelete = await fetch('./delete.php', {
+  method: 'POST',
+  body: data,
+  "Content-Type": "multipart/form-data"
+})
+
+return resultDelete;
+}
+
+alert(deleteAluno(13));
+
