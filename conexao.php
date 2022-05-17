@@ -17,4 +17,5 @@ try {
 }
 }
 
+$conexao = testarConexao();
 ?>
