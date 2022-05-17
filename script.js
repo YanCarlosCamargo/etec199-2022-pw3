@@ -146,10 +146,6 @@ async function deleteAluno(id){
 })
 }
 
-listAlunoBD.then((resultado) => autoInsertBD(resultado))
-
-
-
 
 autoInsertBD = (list) => {
   for (let i = 0; i < list.length; i++) {
@@ -157,3 +153,8 @@ autoInsertBD = (list) => {
     console.log(element);
   }
 }
+
+listAlunoBD().then((resultado) => autoInsertBD(resultado))
+
+
+
