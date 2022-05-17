@@ -144,7 +144,7 @@ function autoInsertBD(list){
     const tr = document.createElement("tr")
 
     const btn = document.createElement("button");
-    btn.setAttribute("value", id)
+    btn.setAttribute("value", id);
   
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;
@@ -164,7 +164,9 @@ function autoInsertBD(list){
   
     const media = document.createElement("td")
     media.innerText = (n3+n2+n1)/3;
-    tr.appendChild(media)
+    tr.appendChild(media);
+    
+    tr.appendChild(btn);
   
     table.appendChild(tr)
   
