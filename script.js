@@ -144,7 +144,10 @@ async function deleteAluno(id){
 })
 }
 
-  console.log("Resultado do Delete: "+deleteAluno(13));
+deleteAluno(13).then((resultado) => console.log("resultado do delete: "+resultado))
+
+ 
+
 
 alert(deleteAluno(13));
 
