@@ -123,25 +123,28 @@ function autoInsertBD(list){
   for (let i = 0; i < list.length; i++) {
      const json = list[i];
 
-
+     
      const { _nome } = list[i];
      const { _nota1 } = list[i];
      const { _nota2 } = list[i];
      const { _nota3 } = list[i];
 
 
-     create(_nome, _nota1, _nota2, _nota3);
+     create(0, _nome, _nota1, _nota2, _nota3);
     console.log(json);
   }
 
 
 
-  function create(n , n1, n2, n3){
+  function create(id, n, n1, n2, n3){
     const form = document.querySelector("form")
  
     const table = document.querySelector(".tbody")
   
     const tr = document.createElement("tr")
+
+    const btn = document.createElement("button");
+    btn.setAttribute("value", id)
   
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;

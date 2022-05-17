@@ -10,6 +10,7 @@ function listarAlunos($conexao){
     $rs = $conexao->query($sql);
     while($row = $rs->fetch(PDO::FETCH_OBJ)){
         $aluno = new Aluno(
+            $row->Id,
             $row->nome,
             $row->nota1,
             $row->nota2,
