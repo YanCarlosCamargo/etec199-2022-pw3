@@ -164,7 +164,7 @@ function autoInsertBD(list){
 
 
 
-  function create(_nome , _nota1, _nota2,_nota3){
+  function create(n , n1, n2, n3){
     const form = document.querySelector("form")
  
     const table = document.querySelector(".tbody")
@@ -172,22 +172,23 @@ function autoInsertBD(list){
     const tr = document.createElement("tr")
   
     const nomeAluno = document.createElement("td")
-    nomeAluno.innerText = _nome;
+    nomeAluno.innerText = n;
     tr.appendChild(nomeAluno)
   
     const nota1 = document.createElement("td")
-    nota1.innerText = _nota1;
+    nota1.innerText = n1;
     tr.appendChild(nota1)
   
     const nota2 = document.createElement("td")
-    nota2.innerText =  _nota2 
+    nota2.innerText =  n2;
     tr.appendChild(nota2)
   
     const nota3 = document.createElement("td")
-    nota3.innerText =  _nota3 
+    nota3.innerText =  n3;
     tr.appendChild(nota3)
   
     const media = document.createElement("td")
+    media.innerText = (n3+n2+n1)/3;
     tr.appendChild(media)
   
     table.appendChild(tr)
