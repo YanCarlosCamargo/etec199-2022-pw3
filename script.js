@@ -146,6 +146,7 @@ function autoInsertBD(list){
     const btn = document.createElement("button");
     btn.setAttribute("value", id);
     btn.setAttribute("class", "deleteButton");
+    btn.setAttribute("style", "background-color: red");
   
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;
