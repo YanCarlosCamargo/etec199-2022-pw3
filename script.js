@@ -186,13 +186,6 @@ function autoInsertBD(list){
 
 listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
-const myModalEl = document.getElementById('exampleModal')
-myModalEl.addEventListener('hidden.bs.modal', event => {
-  
-})
-
-myModalEl.toggle();
-
 var alunoSelecionado = null;
 
 function editModal(value) {
