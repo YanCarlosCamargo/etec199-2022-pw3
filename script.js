@@ -147,10 +147,12 @@ function autoInsertBD(list){
     btn.setAttribute("value", id);
     btn.setAttribute("class", "deleteButton");
     btn.setAttribute("type", "button");
-    btn.setAttribute("style", "background-color: red");
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+  </svg>';
+  //  btn.setAttribute("style", "background-color: red");
 
-    const icon =document.createElement("i");
-    icon.setAttribute("class", "bi bi-x-lg");
+    
 
   
     const nomeAluno = document.createElement("td")
@@ -172,7 +174,6 @@ function autoInsertBD(list){
     const media = document.createElement("td")
     media.innerText = (n3+n2+n1)/3;
     tr.appendChild(media);
-    tr.appendChild(icon);
 
     tr.appendChild(btn);
   
