@@ -193,7 +193,15 @@ myModalEl.addEventListener('hidden.bs.modal', event => {
 
 myModalEl.toggle();
 
+var alunoSelecionado = null;
+
 function editModal(value) {
+  alunoSelecionado = value;
   document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o Aluno "+ value;
 }
 
+document.getElementById('btnExcluirAluno').addEventListener('click', () => {
+  deleteAluno(alunoSelecionado).then(() => {
+    listAlunoBD().then((resultado) => autoInsertBD(resultado));
+  })
+})
