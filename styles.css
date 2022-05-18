@@ -10,7 +10,7 @@ body {
 
 .container {
     display:flexbox;
-   
+   width: 80%;
     color: aliceblue;
 }
 
