@@ -66,7 +66,7 @@ calcularMedia()
 const toggleModal = (id) => {
   var container = document.getElementById('containerMain').style
  var div = document.getElementById(id).style;
-        if (div.display == 'none') {
+        if (div.display === 'none') {
          container.animation = 'changeOpacity2 1s';
          container.filter = 'opacity(0.3)';
          div.display ='block';
