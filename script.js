@@ -120,6 +120,8 @@ async function deleteAluno(id){
 
 
 function autoInsertBD(list){
+  const table = document.querySelector(".tbody")
+  table.innerHTML = "</>";
   for (let i = 0; i < list.length; i++) {
      const json = list[i];
 
