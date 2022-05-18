@@ -78,6 +78,8 @@ const toggleModal = (id) => {
         }
 }
 
+toggleModal('modalForm');
+
 async function insertAlunoBD(name, nota1, nota2, nota3){
     const data = new FormData();
     console.log(name, nota1, nota2, nota3)
