@@ -185,5 +185,11 @@ function autoInsertBD(list){
 
 listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
+const myModalEl = document.getElementById('exampleModal')
+myModalEl.addEventListener('hidden.bs.modal', event => {
+  document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o Aluno "+"UI"
+})
+
+myModalEl.toggle();
 
 
