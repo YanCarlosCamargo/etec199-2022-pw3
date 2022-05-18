@@ -146,7 +146,12 @@ function autoInsertBD(list){
     const btn = document.createElement("button");
     btn.setAttribute("value", id);
     btn.setAttribute("class", "deleteButton");
+    btn.setAttribute("type", "button");
     btn.setAttribute("style", "background-color: red");
+
+    const icon =document.createElement("i");
+    icon.setAttribute("class", "bi bi-x-lg");
+
   
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;
@@ -167,6 +172,7 @@ function autoInsertBD(list){
     const media = document.createElement("td")
     media.innerText = (n3+n2+n1)/3;
     tr.appendChild(media);
+    tr.appendChild(icon);
 
     tr.appendChild(btn);
   
