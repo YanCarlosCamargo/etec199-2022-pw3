@@ -40,7 +40,7 @@ const inserirAluno = (event) => {
   table.innerHTML = "</>";
   insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
   form.reset();
-  listAlunoBD().then((resultado) => autoInsertBD(resultado));
+  refreshAlunos;
 }
 
 
@@ -204,6 +204,6 @@ const editModal = (id, n) => {
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
   deleteAluno(alunoSelecionado).then(() => {
-    listAlunoBD().then((resultado) => autoInsertBD(resultado));
+    refreshAlunos;
   })
 })
