@@ -109,6 +109,8 @@ async function listAlunoBD() {
 
 listAlunoBD();
 
+
+
 async function deleteAluno(id){
   const data = new FormData();
   data.append('id', id);
@@ -151,7 +153,7 @@ function autoInsertBD(list){
     btn.setAttribute("value", id);
     btn.setAttribute("class", "deleteButton");
     btn.setAttribute("type", "button");
-    btn.setAttribute("onclick", `editModal(${id, n})`);
+    btn.setAttribute("onclick", `editModal(${id}, ${n})`);
     btn.setAttribute("data-bs-toggle", "modal");
     btn.setAttribute("data-bs-target", "#exampleModal");
     btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-lg" viewBox="0 0 16 16">
