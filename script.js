@@ -151,7 +151,7 @@ function autoInsertBD(list){
     btn.setAttribute("value", id);
     btn.setAttribute("class", "deleteButton");
     btn.setAttribute("type", "button");
-    btn.setAttribute("onclick", `editModal(${id})`);
+    btn.setAttribute("onclick", `editModal(${id, n})`);
     btn.setAttribute("data-bs-toggle", "modal");
     btn.setAttribute("data-bs-target", "#exampleModal");
     btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -194,9 +194,9 @@ refreshAlunos;
 
 var alunoSelecionado = null;
 
-const editModal = (value) => {
-  alunoSelecionado = value;
-  document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o aluno (a) "+ value;
+const editModal = (id, name) => {
+  alunoSelecionado = id;
+  document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o aluno (a) "+ name;
 }
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
