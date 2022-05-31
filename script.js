@@ -197,6 +197,7 @@ var alunoSelecionado = null;
 const editModal = (id, n) => {
   alunoSelecionado = id;
   document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o aluno (a) "+ n;
+  console.log(n);
 }
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
