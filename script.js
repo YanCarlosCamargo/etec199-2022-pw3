@@ -188,7 +188,9 @@ function autoInsertBD(list){
 }
 }
 
-listAlunoBD().then((resultado) => autoInsertBD(resultado));
+const refreshAlunos = listAlunoBD().then((resultado) => autoInsertBD(resultado));
+
+refreshAlunos;
 
 var alunoSelecionado = null;
 
