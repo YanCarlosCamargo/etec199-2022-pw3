@@ -38,7 +38,11 @@ const inserirAluno = async (event) => {
   const form = document.querySelector("form");
   const table = document.querySelector(".tbody")
   table.innerHTML = "</>";
-  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value).then(()=>{form.reset();listAlunoBD().then((resultado) => autoInsertBD(resultado));});
+  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value)
+  .then(()=>{
+    form.reset();listAlunoBD()
+    .then((resultado) => autoInsertBD(resultado));
+  });
 }
 
 
