@@ -188,11 +188,11 @@ function autoInsertBD(list) {
     table.appendChild(tr)
 
   }
+
+  console.log("Alunos Inseridos")
 }
 
-const refreshAlunos = listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
-refreshAlunos;
 
 var alunoSelecionado = null;
 
@@ -204,7 +204,8 @@ const editModal = (id, n) => {
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
   deleteAluno(alunoSelecionado).then(() => {
-    refreshAlunos();
+    console.log("Deletou")
+    listAlunoBD().then((resultado) => autoInsertBD(resultado));
   });
-  refreshAlunos;
+  listAlunoBD().then((resultado) => autoInsertBD(resultado));
 })
