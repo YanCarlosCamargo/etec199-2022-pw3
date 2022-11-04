@@ -136,15 +136,16 @@ function autoInsertBD(list) {
     const { _nota1 } = list[i];
     const { _nota2 } = list[i];
     const { _nota3 } = list[i];
+    const { _media } = list[i];
 
 
-    create(id, _nome, _nota1, _nota2, _nota3);
+    create(id, _nome, _nota1, _nota2, _nota3, media);
     console.log(json);
   }
 
 
 
-  function create(id, n, n1, n2, n3) {
+  function create(id, n, n1, n2, n3, m) {
     const form = document.querySelector("form")
 
     const table = document.querySelector(".tbody")
@@ -182,7 +183,7 @@ function autoInsertBD(list) {
     tr.appendChild(nota3)
 
     const media = document.createElement("td")
-    media.innerText = (n3 + n2 + n1) / 3;
+    media.innerText = m.toFixed(0);
     tr.appendChild(media);
 
     tr.appendChild(btn);
