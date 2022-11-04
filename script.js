@@ -187,7 +187,8 @@ function autoInsertBD(list) {
     media.innerText = m.toFixed(0);
     tr.appendChild(media);
 
-    const situacao = document.createElement("td")
+    const situacao = document.createElement("td");
+    situacao.setAttribute("class", `${m>=7?"text-bg-success":"text-bg-danger"}`)
     situacao.innerText = `${m>=7?"Aprovado":"Reprovado"}`;
     tr.appendChild(situacao);
 
