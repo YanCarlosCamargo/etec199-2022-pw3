@@ -204,7 +204,7 @@ const editModal = (id, n) => {
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
   deleteAluno(alunoSelecionado).then(() => {
-    refreshAlunos;
+    refreshAlunos();
   });
   refreshAlunos;
 })
