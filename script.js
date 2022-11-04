@@ -38,8 +38,7 @@ async function inserirAluno (event) {
   const form = document.querySelector("form");
   const table = document.querySelector(".tbody")
   table.innerHTML = "</>";
-  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
-  form.reset();
+  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value).then(()=>form.reset());
 }
 
 
