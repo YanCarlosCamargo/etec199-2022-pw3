@@ -40,7 +40,7 @@ const inserirAluno = (event) => {
   table.innerHTML = "</>";
   insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value);
   form.reset();
-  refreshAlunos;
+  listAlunoBD().then((resultado) => autoInsertBD(resultado));
 }
 
 
