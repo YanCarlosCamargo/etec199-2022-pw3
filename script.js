@@ -187,6 +187,10 @@ function autoInsertBD(list) {
     media.innerText = m.toFixed(0);
     tr.appendChild(media);
 
+    const situacao = document.createElement("td")
+    media.innerText = `${m>=7?"Aprovado":"Reprovado"}`;
+    tr.appendChild(situacao);
+
     tr.appendChild(btn);
 
     table.appendChild(tr)
