@@ -23,7 +23,7 @@ const validacao = () => {
   if (form.name.value == '' || form.nota1.value == '' || form.nota2.value == '' || form.nota3.value == '') {
     alert('Insira todos os campos.')
     return false
-  } else if(form.nota1.value > 10 && form.nota2.value > 10 && form.nota3.value > 10) {
+  } else if (form.nota1.value > 10 && form.nota2.value > 10 && form.nota3.value > 10) {
     alert('Notas não podem ser maior que 10!')
     return false
   }
@@ -65,29 +65,29 @@ calcularMedia()
 
 const toggleModal = (id) => {
   var container = document.getElementById('containerMain').style
- var div = document.getElementById(id).style;
-        if (div.display === 'none') {
-         container.animation = 'changeOpacity2 1s';
-         container.filter = 'opacity(0.3)';
-         div.display ='block';
+  var div = document.getElementById(id).style;
+  if (div.display === 'none') {
+    container.animation = 'changeOpacity2 1s';
+    container.filter = 'opacity(0.3)';
+    div.display = 'block';
 
-        } else {
-         div.display = 'none';
-          container.animation = 'changeOpacity 1s';
-         container.filter = 'opacity(1)';
-        }
+  } else {
+    div.display = 'none';
+    container.animation = 'changeOpacity 1s';
+    container.filter = 'opacity(1)';
+  }
 }
 
 toggleModal('modalForm');
 
-async function insertAlunoBD(name, nota1, nota2, nota3){
-    const data = new FormData();
-    console.log(name, nota1, nota2, nota3)
+async function insertAlunoBD(name, nota1, nota2, nota3) {
+  const data = new FormData();
+  console.log(name, nota1, nota2, nota3)
 
-    data.append('name', name);
-    data.append('nota1', nota1);
-    data.append('nota2', nota2);
-    data.append('nota3', nota3);
+  data.append('name', name);
+  data.append('nota1', nota1);
+  data.append('nota2', nota2);
+  data.append('nota3', nota3);
 
   await fetch('./insert.php', {
     method: 'POST',
@@ -111,42 +111,42 @@ listAlunoBD();
 
 
 
-async function deleteAluno(id){
+async function deleteAluno(id) {
   const data = new FormData();
   data.append('id', id);
 
   return await fetch('./delete.php', {
-  method: 'POST',
-  body: data,
-  "Content-Type": "multipart/form-data"
-})
+    method: 'POST',
+    body: data,
+    "Content-Type": "multipart/form-data"
+  })
 }
 
 
-function autoInsertBD(list){
+function autoInsertBD(list) {
   const table = document.querySelector(".tbody")
   table.innerHTML = "</>";
   for (let i = 0; i < list.length; i++) {
-     const json = list[i];
+    const json = list[i];
 
-     const { id } = list[i];
-     const { _nome } = list[i];
-     const { _nota1 } = list[i];
-     const { _nota2 } = list[i];
-     const { _nota3 } = list[i];
+    const { id } = list[i];
+    const { _nome } = list[i];
+    const { _nota1 } = list[i];
+    const { _nota2 } = list[i];
+    const { _nota3 } = list[i];
 
 
-     create(id, _nome, _nota1, _nota2, _nota3);
+    create(id, _nome, _nota1, _nota2, _nota3);
     console.log(json);
   }
 
 
 
-  function create(id, n, n1, n2, n3){
+  function create(id, n, n1, n2, n3) {
     const form = document.querySelector("form")
- 
+
     const table = document.querySelector(".tbody")
-  
+
     const tr = document.createElement("tr")
 
     const btn = document.createElement("button");
@@ -162,32 +162,32 @@ function autoInsertBD(list){
     btn.setAttribute("style", "border: none");
 
 
-  
+
     const nomeAluno = document.createElement("td")
     nomeAluno.innerText = n;
     tr.appendChild(nomeAluno)
-  
+
     const nota1 = document.createElement("td")
     nota1.innerText = n1;
     tr.appendChild(nota1)
-  
+
     const nota2 = document.createElement("td")
-    nota2.innerText =  n2;
+    nota2.innerText = n2;
     tr.appendChild(nota2)
-  
+
     const nota3 = document.createElement("td")
-    nota3.innerText =  n3;
+    nota3.innerText = n3;
     tr.appendChild(nota3)
-  
+
     const media = document.createElement("td")
-    media.innerText = (n3+n2+n1)/3;
+    media.innerText = (n3 + n2 + n1) / 3;
     tr.appendChild(media);
 
     tr.appendChild(btn);
-  
+
     table.appendChild(tr)
-  
-}
+
+  }
 }
 
 const refreshAlunos = listAlunoBD().then((resultado) => autoInsertBD(resultado));
@@ -198,12 +198,13 @@ var alunoSelecionado = null;
 
 const editModal = (id, n) => {
   alunoSelecionado = id;
-  document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o aluno (a) "+ n;
+  document.getElementById('sureDelete').innerText = "Deseja realmente Excluir o aluno (a) " + n;
   console.log(n);
 }
 
 document.getElementById('btnExcluirAluno').addEventListener('click', () => {
   deleteAluno(alunoSelecionado).then(() => {
     refreshAlunos;
-  })
+  });
+  refreshAlunos;
 })
