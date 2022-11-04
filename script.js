@@ -34,7 +34,8 @@ const validacao = () => {
 //
 // Cria os elementos e calcula a média de um novo aluno
 const inserirAluno = async (event) => {
-  event.preventDefault()
+  event.preventDefault();
+  if (validacao()) {
   const form = document.querySelector("form");
   const table = document.querySelector(".tbody")
   table.innerHTML = "</>";
@@ -42,7 +43,7 @@ const inserirAluno = async (event) => {
   .then(()=>{
     form.reset();listAlunoBD()
     .then((resultado) => autoInsertBD(resultado));
-  });
+  });}
 }
 
 
