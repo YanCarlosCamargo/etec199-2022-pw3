@@ -203,7 +203,7 @@ function autoInsertBD(list) {
   }
 
   console.log("Alunos Inseridos");
-  countAprovados;
+  countAprovados();
 }
 
 listAlunoBD().then((resultado) => autoInsertBD(resultado));
