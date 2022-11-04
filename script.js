@@ -33,21 +33,18 @@ const validacao = () => {
 }
 //
 // Cria os elementos e calcula a média de um novo aluno
-async function inserirAluno (event) {
+const inserirAluno = async (event) => {
   event.preventDefault()
   const form = document.querySelector("form");
   const table = document.querySelector(".tbody")
   table.innerHTML = "</>";
-  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value).then(()=>form.reset());
+  insertAlunoBD(form.name.value, form.nota1.value, form.nota2.value, form.nota3.value).then(()=>{form.reset();listAlunoBD().then((resultado) => autoInsertBD(resultado));});
 }
 
 
 
 const botao = document.querySelector("#botao")
-botao.addEventListener("click", inserirAluno().then(() => {
-  listAlunoBD().then((resultado) => autoInsertBD(resultado));
-
-}))
+botao.addEventListener("click", inserirAluno)
 
 // Não permite que "-", "+" e "e" não sejam digitados no campo de numeros
 const input = document.querySelectorAll(".n")
