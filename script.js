@@ -33,7 +33,7 @@ const validacao = () => {
 }
 //
 // Cria os elementos e calcula a média de um novo aluno
-const inserirAluno = async (event) => {
+async function inserirAluno (event) {
   event.preventDefault()
   const form = document.querySelector("form");
   const table = document.querySelector(".tbody")
@@ -45,7 +45,7 @@ const inserirAluno = async (event) => {
 
 
 const botao = document.querySelector("#botao")
-botao.addEventListener("click", inserirAluno.then(() => {
+botao.addEventListener("click", inserirAluno().then(() => {
   listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
 }))
