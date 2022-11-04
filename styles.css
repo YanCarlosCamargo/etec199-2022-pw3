@@ -20,16 +20,19 @@ body {
 
 th {
     color: white;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
 }
 td{
     color: aliceblue;
+    text-decoration: none;
 }
 tr:hover{
     color: white;
     background-color: white;
-    text-decoration: none;
-    align-items: center;
-    align-content: center;
+    text-decoration: underline;
+
 }
 
 #closeIcon {
