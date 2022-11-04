@@ -124,7 +124,7 @@ async function deleteAluno(id) {
 countAprovados = () => {
   table = document.getElementById("interior-table");
   aprovado = table.querySelectorAll("#aprovado");
-  console.log(aprovado);
+  console.log("Quantidade de aprovados: "+aprovado.length);
   reprovado = table.querySelectorAll("#reprovado");
   console.log(reprovado);
 }
