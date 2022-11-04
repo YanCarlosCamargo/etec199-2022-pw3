@@ -102,11 +102,7 @@ async function insertAlunoBD(name, nota1, nota2, nota3) {
 async function listAlunoBD() {
 
   const dados = await fetch('./select.php');
-
-  console.log(dados);
-
   const json = await dados.json();
-  console.log(json);
   return json;
 }
 
@@ -126,7 +122,7 @@ async function deleteAluno(id) {
 }
 
 countAprovados = () => {
-  table = document.getElementsByName("interior-table");
+  table = document.getElementById("interior-table");
   aprovado = table.querySelectorAll("#aprovado");
   console.log(aprovado);
   reprovado = table.querySelectorAll("#reprovado");
