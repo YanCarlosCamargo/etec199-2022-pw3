@@ -126,7 +126,7 @@ countAprovados = () => {
   aprovado = table.querySelectorAll("#aprovado");
   console.log("Quantidade de aprovados: "+aprovado.length);
   reprovado = table.querySelectorAll("#reprovado");
-  console.log(reprovado);
+  console.log("Quantidade de reprovados: "+reprovado.length);
 }
 
 function autoInsertBD(list) {
