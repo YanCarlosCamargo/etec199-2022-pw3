@@ -189,6 +189,7 @@ function autoInsertBD(list) {
 
     const situacao = document.createElement("td");
     situacao.setAttribute("class", `${m>=7?"bg-success":"bg-danger"}`)
+    situacao.setAttribute("id", `${m>=7?"aprovado":"reprovado"}`)
     situacao.innerText = `${m>=7?"Aprovado":"Reprovado"}`;
     tr.appendChild(situacao);
 
@@ -216,4 +217,13 @@ document.getElementById('btnExcluirAluno').addEventListener('click', () => {
     console.log("Deletou")
     listAlunoBD().then((resultado) => autoInsertBD(resultado));
   });
-})
+});
+
+
+countAprovados = () => {
+  table = document.getElementsByTagName("table");
+  aprovado = table.querySelectorAll("#aprovado");
+  console.log(aprovado);
+  reprovado = table.querySelectorAll("#reprovado");
+  console.log(reprovado);
+}
