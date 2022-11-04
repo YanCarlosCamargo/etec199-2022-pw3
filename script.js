@@ -192,7 +192,7 @@ function autoInsertBD(list) {
   console.log("Alunos Inseridos")
 }
 
-
+listAlunoBD().then((resultado) => autoInsertBD(resultado));
 
 var alunoSelecionado = null;
 
