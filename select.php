@@ -15,6 +15,7 @@ function listarAlunos($conexao){
             $row->nota1,
             $row->nota2,
             $row->nota3,
+            $row->media,
         );
         array_push($resultados, $aluno);
     }

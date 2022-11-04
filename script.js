@@ -139,7 +139,7 @@ function autoInsertBD(list) {
     const { _media } = list[i];
 
 
-    create(id, _nome, _nota1, _nota2, _nota3, media);
+    create(id, _nome, _nota1, _nota2, _nota3, _media);
     console.log(json);
   }
 
