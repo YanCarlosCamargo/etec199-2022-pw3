@@ -27,8 +27,9 @@ td{
 tr:hover{
     color: white;
     background-color: white;
-    text-decoration: underline;
-
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
 }
 
 #closeIcon {
