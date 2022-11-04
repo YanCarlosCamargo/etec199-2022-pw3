@@ -125,6 +125,13 @@ async function deleteAluno(id) {
   })
 }
 
+countAprovados = () => {
+  table = document.getElementsByName("interior-table");
+  aprovado = table.querySelectorAll("#aprovado");
+  console.log(aprovado);
+  reprovado = table.querySelectorAll("#reprovado");
+  console.log(reprovado);
+}
 
 function autoInsertBD(list) {
   const table = document.querySelector(".tbody")
@@ -199,7 +206,8 @@ function autoInsertBD(list) {
 
   }
 
-  console.log("Alunos Inseridos")
+  console.log("Alunos Inseridos");
+  countAprovados;
 }
 
 listAlunoBD().then((resultado) => autoInsertBD(resultado));
@@ -220,10 +228,3 @@ document.getElementById('btnExcluirAluno').addEventListener('click', () => {
 });
 
 
-countAprovados = () => {
-  table = document.getElementsByTagName("table");
-  aprovado = table.querySelectorAll("#aprovado");
-  console.log(aprovado);
-  reprovado = table.querySelectorAll("#reprovado");
-  console.log(reprovado);
-}
