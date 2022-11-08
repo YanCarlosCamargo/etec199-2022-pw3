@@ -11,26 +11,24 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
-
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],
-          ['Alfred Hitchcock (1935)', 8.4,         7.9],
-          ['Ralph Thomas (1959)',     6.9,         6.5],
-          ['Don Sharp (1978)',        6.5,         6.4],
-          ['James Hawes (2008)',      4.4,         6.2]
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
         ]);
 
         var options = {
-          title: 'The decline of \'The 39 Steps\'',
-          vAxis: {title: 'Accumulated Rating'},
-          isStacked: true
+          title: 'My Daily Activities',
+          is3D: true,
         };
 
-        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
-
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
     </script>
@@ -100,7 +98,7 @@
             </div>
           </div>
 
-          <div id="chart_div" style="width: 900px; height: 500px;"></div>
+          <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
