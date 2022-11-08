@@ -224,3 +224,19 @@ document.getElementById('btnExcluirAluno').addEventListener('click', () => {
 });
 
 
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart(aprovados, reprovados) {
+  var data = google.visualization.arrayToDataTable([
+    ['Aprovados',     aprovados],
+    ['Reprovados',     reprovados]
+  ]);
+
+  var options = {
+    title: 'Relação de aprovados e reprovados',
+    is3D: false,
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+  chart.draw(data, options);
+}
