@@ -128,6 +128,15 @@ countAprovados = () => {
   reprovado = table.querySelectorAll("#reprovado");
   console.log("Quantidade de reprovados: "+reprovado.length);
 
+  var data = [
+    {x: "Aprovados", value: aprovado},
+    {x: "Reprovados", value: reprovado},
+  ];
+  
+  chart = anychart.pie(data);
+  chart.innerRadius("30%");
+  chart.container("container");
+  chart.draw();
 }
 
 function autoInsertBD(list) {
@@ -224,24 +233,3 @@ document.getElementById('btnExcluirAluno').addEventListener('click', () => {
   });
 });
 
-
-var data = [
-  {x: "A", value: 637166},
-  {x: "B", value: 721630},
-  {x: "C", value: 148662},
-  {x: "D", value: 78662},
-  {x: "E", value: 90000}
-];
-
-// create a pie chart and set the data
-chart = anychart.pie(data);
-
-/* set the inner radius
-(to turn the pie chart into a doughnut chart)*/
-chart.innerRadius("30%");
-
-// set the container id
-chart.container("container");
-
-// initiate drawing the chart
-chart.draw();
