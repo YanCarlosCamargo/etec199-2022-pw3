@@ -12,6 +12,23 @@
     
 </head>
 <body>
+  
+  <div class="modalForm" id="modalForm">
+        
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleModal('modalForm')" width="30" height="30" id="closeIcon" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>
+    
+    <form>
+        <h2>Inserir Aluno</h2>
+        <input type="text" id="name" placeholder="Nome"/>
+        <input type="number" id="nota1" class="n" placeholder="Nota 1">
+        <input type="number" id="nota2" class="n" placeholder="Nota 2">
+        <input type="number" id="nota3" class="n" placeholder="Nota 3">
+        <button id="botao">Inserir</button>
+    </form>
+</div>
     <div class="container" id="containerMain">
         <section id="table">
         <div class="table-responsive-sm">
@@ -39,22 +56,6 @@
 
     </div>
 
-        <div class="modalForm" id="modalForm">
-        
-            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleModal('modalForm')" width="30" height="30" id="closeIcon" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-              </svg>
-            
-            <form>
-                <h2>Inserir Aluno</h2>
-                <input type="text" id="name" placeholder="Nome"/>
-                <input type="number" id="nota1" class="n" placeholder="Nota 1">
-                <input type="number" id="nota2" class="n" placeholder="Nota 2">
-                <input type="number" id="nota3" class="n" placeholder="Nota 3">
-                <button id="botao">Inserir</button>
-            </form>
-        </div>
 
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
