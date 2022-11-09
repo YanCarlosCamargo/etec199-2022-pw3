@@ -137,7 +137,7 @@ countAprovados = () => {
   chart.innerRadius("30%");
   chart.container("container");
   chart.background().fill("#252326");
-  for (let c=1; let<1;c++) {if (c=1) chart.draw(); else chart.autoRedraw();}
+  for (let c=1; c<1;c++) {if (c=1) chart.draw(); else chart.autoRedraw();}
 }
 
 function autoInsertBD(list) {
