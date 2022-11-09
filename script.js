@@ -136,6 +136,7 @@ countAprovados = () => {
   chart = anychart.pie(data);
   chart.innerRadius("30%");
   chart.container("container");
+  chart.background().fill("#252326");
   chart.draw();
 }
 
