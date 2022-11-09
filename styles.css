@@ -14,6 +14,11 @@ body {
     color: aliceblue;
 }
 
+#container {
+    align-self: center;
+    justify-self: center;
+}
+
 #table {
 
 }
