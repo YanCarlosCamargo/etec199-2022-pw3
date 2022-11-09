@@ -129,8 +129,8 @@ countAprovados = () => {
   console.log("Quantidade de reprovados: "+reprovado.length);
 
   var data = [
-    {x: "Aprovados", value: aprovado},
-    {x: "Reprovados", value: reprovado},
+    {x: "Aprovados", value: aprovado.length},
+    {x: "Reprovados", value: reprovado.length},
   ];
   
   chart = anychart.pie(data);
